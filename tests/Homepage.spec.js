@@ -11,14 +11,14 @@ test('Home Page', async ({ browser }) => {
   const home = new HomePage(page);
 
   await home.goto();
-  await home.addProductToCart('ZARA COAT 3');
+  await home.addProductToCart('iphone 13 pro');
   await home.checkout('ind');
 
   await expect(page.locator('h1')).toContainText('Thankyou for the order.');
   await expect(page.locator('#htmlData')).toContainText(
     'You can see all the Orders in Orders History Page'
   );
-  await expect(page.locator('#htmlData')).toContainText('ZARA COAT 3');
+  await expect(page.locator('#htmlData')).toContainText('iphone 13 pro');
 
   await context.close();
 });

@@ -23,13 +23,8 @@ const config = ({
     {
       name: 'desktop',
     },
-    // mobile emulation using a built-in device profile
-    {
-      name: 'mobile',
-      use: {
-        ...devices['iPhone 12'],
-      },
-    },
+   
+    
   ],
 });
 
